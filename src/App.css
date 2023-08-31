@@ -56,4 +56,9 @@
         margin-top: 15px;
         margin-inline: 10px;
     }
+    .btn:hover {
+        border-radius: none;
+        background-color: none;
+        box-shadow: none;
+    }
 }
