@@ -30,6 +30,7 @@ const questoes = [
     {
         pergunta: 'FIM',
         opcoes: ['Tentar novamente']
+        
     },
     
 ]
@@ -37,24 +38,29 @@ const questoes = [
 function Questao() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [resposta, setResposta] = useState("")
+    const [pontos, setPontos] = useState(0)
     
     const verificarResposta = (opcao) => {
         if (opcao === questoes[currentQuestion].correta) {
             setResposta("Resposta correta");
+            setPontos(pontos + 5)
         } else {
             setResposta("Resposta errada");
+            
+            if (pontos <= 0) {
+                setPontos(0)
+            } else {
+                setPontos(pontos - 2)
+            }
         }
 
-        if (questoes[currentQuestion].pergunta == 'FIM') {
-            setResposta(null)
-        }
 
         if (currentQuestion < questoes.length-1) {
             setCurrentQuestion(currentQuestion + 1)
-        } else {
+        } else { //FIM
+            setResposta(null)
             setCurrentQuestion(currentQuestion - (questoes.length-1))
-            
-            
+            setPontos(0)
         }
     }
 
@@ -66,12 +72,11 @@ function Questao() {
                     <button className="btn" key={index} onClick={() => verificarResposta(opcao)}>{opcao}</button>
                     ))
                 }
-            
+            <p>Pontos: {pontos}</p> 
             <h1 id="res">{resposta}</h1>
         </div>
     )
 
 }
-
 
 export default Questao;
