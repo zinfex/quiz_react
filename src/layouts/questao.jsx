@@ -18,9 +18,19 @@ const questoes = [
         correta: 'Yuri Gagarin'
     },
     {
+        pergunta: 'De onde é a invenção do chuveiro elétrico?',
+        opcoes: ['França', 'Brasil', 'Itália', 'Inglaterra'],
+        correta: 'Brasil'
+    },
+    {
+        pergunta: 'Qual o número mínimo de jogadores em cada time numa partida de futebol?',
+        opcoes: ['8', '10', '9', '7'],
+        correta: '7'
+    },
+    {
         pergunta: 'FIM',
         opcoes: ['Tentar novamente']
-    }
+    },
     
 ]
 

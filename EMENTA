@@ -2,6 +2,11 @@
 
     - Objetivos {
         Aprender a usar o USE STATE
-        Criar Questões
-        projetar respostas
+        criar placar
+    }
+
+    - Atualizar/Fazer deploy pro github {
+        npm run deploy
+        git commit
+        git push
     }
