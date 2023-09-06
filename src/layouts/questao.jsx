@@ -46,12 +46,7 @@ function Questao() {
             setPontos(pontos + 5)
         } else {
             setResposta("Resposta errada");
-            
-            if (pontos <= 0) {
-                setPontos(0)
-            } else {
-                setPontos(pontos - 2)
-            }
+            setPontos(pontos - 2)
         }
 
 
